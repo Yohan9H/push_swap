@@ -6,7 +6,7 @@
 /*   By: yohurteb <yohurteb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 13:15:55 by yohurteb          #+#    #+#             */
-/*   Updated: 2024/06/13 13:30:59 by yohurteb         ###   ########.fr       */
+/*   Updated: 2024/06/13 14:50:16 by yohurteb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,8 @@ void	rrb(t_list **b);
 
 int	ft_atoi(const char *str);
 
-t_list	*parser(char **tab_argv, t_list **lst);
+t_list	*parser(char **argv, t_list **lst);
+
+int	check_args(int argc, char **argv);
 
 #endif

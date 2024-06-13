@@ -6,7 +6,7 @@
 /*   By: yohurteb <yohurteb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 16:51:37 by yohurteb          #+#    #+#             */
-/*   Updated: 2024/06/13 14:20:00 by yohurteb         ###   ########.fr       */
+/*   Updated: 2024/06/13 17:03:43 by yohurteb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,17 +64,17 @@ t_list *parser(char **argv, t_list **lst)
 	return (*lst);
 }
 
-#include <stdio.h>
-int	main(int argc, char **argv)
-{
-	t_list	*lst;
+// #include <stdio.h>
+// int	main(int argc, char **argv)
+// {
+// 	t_list	*lst;
 
-	lst = NULL;
-	lst = parser(argv, &lst);
-	while (lst)
-	{
-		printf("%d -", lst->value);
-		printf(" %d\n", lst->index);
-		lst = lst->next;
-	}
-}
+// 	lst = NULL;
+// 	lst = parser(argv, &lst);
+// 	while (lst)
+// 	{
+// 		printf("%d -", lst->value);
+// 		printf(" %d\n", lst->index);
+// 		lst = lst->next;
+// 	}
+// }

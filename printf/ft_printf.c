@@ -6,11 +6,11 @@
 /*   By: yohurteb <yohurteb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 18:26:56 by yohan.h           #+#    #+#             */
-/*   Updated: 2024/06/11 14:01:15 by yohurteb         ###   ########.fr       */
+/*   Updated: 2024/06/13 15:55:18 by yohurteb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
 static int	ft_putchar(char c)
 {

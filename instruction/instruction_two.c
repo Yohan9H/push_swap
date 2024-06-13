@@ -6,11 +6,11 @@
 /*   By: yohurteb <yohurteb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 12:59:24 by yohurteb          #+#    #+#             */
-/*   Updated: 2024/06/12 16:58:20 by yohurteb         ###   ########.fr       */
+/*   Updated: 2024/06/13 15:54:46 by yohurteb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 void	ra(t_list **a)
 {

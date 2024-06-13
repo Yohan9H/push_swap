@@ -6,27 +6,38 @@
 #    By: yohurteb <yohurteb@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/07 12:48:41 by yohurteb          #+#    #+#              #
-#    Updated: 2024/06/11 13:36:32 by yohurteb         ###   ########.fr        #
+#    Updated: 2024/06/13 17:05:31 by yohurteb         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = push_swap.a
+NAME = push_swap
 
-CC = cc
+CC = cc -g
 
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra -I include/
 
 SRCS = \
-	push_swap.c \
-	instruction.c
-	instruction_two.c
+	src/main.c \
+	src/check_args.c \
+	src/parser.c \
+	instruction/instruction.c \
+	instruction/instruction_two.c \
+	utils/ft_atoi.c \
+	utils/ft_lstadd_back.c \
+	utils/ft_lstadd_front.c \
+	utils/ft_lstclear.c \
+	utils/ft_lstlast.c \
+	utils/ft_lstnew.c \
+	utils/ft_lstsize.c \
+	printf/ft_printf_two.c \
+	printf/ft_printf.c
 
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+	$(CC) $(FLAGS) $(OBJS) -o $(NAME)
 
 clean:
 	rm -f $(OBJS)
