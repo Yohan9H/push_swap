@@ -6,7 +6,7 @@
 /*   By: yohurteb <yohurteb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 16:39:05 by yohurteb          #+#    #+#             */
-/*   Updated: 2024/06/12 18:34:45 by yohurteb         ###   ########.fr       */
+/*   Updated: 2024/06/13 13:30:53 by yohurteb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ t_list	*ft_lstnew(int content)
 	if (!list)
 		return (NULL);
 	list->value = content;
+	list->index = -1;
 	list->next = NULL;
 	return (list);
 }
