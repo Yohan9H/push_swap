@@ -6,11 +6,33 @@
 /*   By: yohurteb <yohurteb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 17:04:51 by yohurteb          #+#    #+#             */
-/*   Updated: 2024/06/14 13:23:45 by yohurteb         ###   ########.fr       */
+/*   Updated: 2024/06/14 16:32:45 by yohurteb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include "stdio.h"
+
+void	simple_or_radix(t_list **stack_a, t_list **stack_b)
+{
+	if (ft_lstsize(*stack_a) <= 5)
+		simple_sort(stack_a, stack_b);
+	//else
+	//radix
+}
+
+void	print_lst(t_list **stack_a)
+{
+	t_list	*lst;
+
+	lst = *stack_a;
+	printf("\n---FINSIH---\n");
+	while (lst)
+	{
+		printf("%d\n", lst->value);
+		lst = lst->next;
+	}
+}	
 
 int	main(int argc, char **argv)
 {
@@ -24,14 +46,16 @@ int	main(int argc, char **argv)
 	}
 	stack_a = NULL;
 	stack_a = parser(argv, &stack_a);
-	stack_b = (t_list *)malloc(ft_lstsize(stack_a) * sizeof(t_list));
+	stack_b = NULL;
 	if (is_sorted(&stack_a) == 0)
 	{
 		ft_lstclear(&stack_a);
 		ft_lstclear(&stack_b);
+		return (0);
 	}
-	// simple_sort
-	// radix_sort
+	simple_or_radix(&stack_a, &stack_b);
+	print_lst(&stack_a);
 	ft_lstclear(&stack_a);
 	ft_lstclear(&stack_b);
+	return (0);
 }
