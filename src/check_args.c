@@ -6,13 +6,13 @@
 /*   By: yohurteb <yohurteb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/13 14:49:03 by yohurteb          #+#    #+#             */
-/*   Updated: 2024/06/14 10:23:36 by yohurteb         ###   ########.fr       */
+/*   Updated: 2024/06/14 17:35:41 by yohurteb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	if_same(char **argv, int nb, size_t j)
+static int	if_same(char **argv, int nb, size_t j)
 {
 	j++;
 	while (argv[j])
@@ -24,7 +24,7 @@ int	if_same(char **argv, int nb, size_t j)
 	return (0);
 }
 
-int	is_num(char *argv)
+static int	is_num(char *argv)
 {
 	size_t	i;
 

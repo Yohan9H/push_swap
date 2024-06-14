@@ -6,14 +6,14 @@
 /*   By: yohurteb <yohurteb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 17:04:51 by yohurteb          #+#    #+#             */
-/*   Updated: 2024/06/14 17:31:17 by yohurteb         ###   ########.fr       */
+/*   Updated: 2024/06/14 17:35:55 by yohurteb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include "stdio.h"
 
-void	simple_or_radix(t_list **stack_a, t_list **stack_b)
+static void	simple_or_radix(t_list **stack_a, t_list **stack_b)
 {
 	if (ft_lstsize(*stack_a) <= 5)
 		simple_sort(stack_a, stack_b);

@@ -6,13 +6,13 @@
 /*   By: yohurteb <yohurteb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 16:51:37 by yohurteb          #+#    #+#             */
-/*   Updated: 2024/06/14 11:22:54 by yohurteb         ###   ########.fr       */
+/*   Updated: 2024/06/14 17:36:24 by yohurteb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_list	*get_min(t_list **lst)
+static t_list	*get_min(t_list **lst)
 {
 	t_list	*list;
 	t_list	*min;
@@ -33,7 +33,7 @@ t_list	*get_min(t_list **lst)
 	return (min);
 }
 
-void	init_index(t_list **lst)
+static void	init_index(t_list **lst)
 {
 	t_list	*list;
 	int		index;

@@ -6,13 +6,13 @@
 /*   By: yohurteb <yohurteb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 11:18:47 by yohurteb          #+#    #+#             */
-/*   Updated: 2024/06/14 17:10:48 by yohurteb         ###   ########.fr       */
+/*   Updated: 2024/06/14 17:34:24 by yohurteb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	give_min(t_list **stack_a, int value)
+static int	give_min(t_list **stack_a, int value)
 {
 	t_list	*lst;
 	int		min;
@@ -28,7 +28,7 @@ int	give_min(t_list **stack_a, int value)
 	return (min);
 }
 
-void	sort_3(t_list **stack_a)
+static void	sort_3(t_list **stack_a)
 {
 	t_list	*lst;
 	int		min;
@@ -40,7 +40,7 @@ void	sort_3(t_list **stack_a)
 	sort_3_two(stack_a, lst, min, next_min);
 }
 
-void	sort_4(t_list **stack_a, t_list **stack_b)
+static void	sort_4(t_list **stack_a, t_list **stack_b)
 {
 	int	pos_min;
 
@@ -61,7 +61,7 @@ void	sort_4(t_list **stack_a, t_list **stack_b)
 	pa(stack_a, stack_b);
 }
 
-void	sort_5(t_list **stack_a, t_list **stack_b)
+static void	sort_5(t_list **stack_a, t_list **stack_b)
 {
 	int	pos_min;
 
@@ -103,8 +103,3 @@ void	simple_sort(t_list	**stack_a, t_list **stack_b)
 	else if (size == 5)
 		sort_5(stack_a, stack_b);
 }
-// get_min
-// sort_2
-// sort_3
-// sort_4
-// sort_5
