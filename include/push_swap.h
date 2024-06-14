@@ -6,7 +6,7 @@
 /*   By: yohurteb <yohurteb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 13:15:55 by yohurteb          #+#    #+#             */
-/*   Updated: 2024/06/14 15:40:34 by yohurteb         ###   ########.fr       */
+/*   Updated: 2024/06/14 17:27:13 by yohurteb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,5 +67,7 @@ void	sort_3_two(t_list **stack_a, t_list *lst, int min, int next_min);
 int	give_pos_min(t_list	**stack_a, int	min);
 
 void	simple_sort(t_list	**stack_a, t_list **stack_b);
+
+void	radix_sort(t_list **stack_a, t_list **stack_b);
 
 #endif

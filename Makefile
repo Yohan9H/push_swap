@@ -6,7 +6,7 @@
 #    By: yohurteb <yohurteb@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/07 12:48:41 by yohurteb          #+#    #+#              #
-#    Updated: 2024/06/14 16:09:40 by yohurteb         ###   ########.fr        #
+#    Updated: 2024/06/14 17:25:29 by yohurteb         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,8 @@ SRCS = \
 	utils/ft_lstsize.c \
 	algo/is_sorted.c \
 	algo/simple_sort.c \
-	algo/simple_sort_two.c
+	algo/simple_sort_two.c \
+	algo/radix.c
 
 OBJS = $(SRCS:.c=.o)
 

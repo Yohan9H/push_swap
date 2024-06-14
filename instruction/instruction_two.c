@@ -6,7 +6,7 @@
 /*   By: yohurteb <yohurteb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 12:59:24 by yohurteb          #+#    #+#             */
-/*   Updated: 2024/06/13 15:54:46 by yohurteb         ###   ########.fr       */
+/*   Updated: 2024/06/14 17:29:33 by yohurteb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,8 +61,6 @@ void	rra(t_list **a)
 	t_list	*tmp;
 	t_list	*last;
 
-	if (!a || !*a || !(*a)->next->next)
-		return ;
 	last = ft_lstlast(*a);
 	tmp = *a;
 	while (tmp->next->next != NULL)
@@ -78,8 +76,6 @@ void	rrb(t_list **b)
 	t_list	*tmp;
 	t_list	*last;
 
-	if (!b || !*b || !(*b)->next->next)
-		return ;
 	last = ft_lstlast(*b);
 	tmp = *b;
 	while (tmp->next->next != NULL)

@@ -6,7 +6,7 @@
 /*   By: yohurteb <yohurteb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 17:04:51 by yohurteb          #+#    #+#             */
-/*   Updated: 2024/06/14 16:32:45 by yohurteb         ###   ########.fr       */
+/*   Updated: 2024/06/14 17:31:17 by yohurteb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ void	simple_or_radix(t_list **stack_a, t_list **stack_b)
 {
 	if (ft_lstsize(*stack_a) <= 5)
 		simple_sort(stack_a, stack_b);
-	//else
-	//radix
+	else
+		radix_sort(stack_a, stack_b);
 }
 
-void	print_lst(t_list **stack_a)
+void	print_lst(t_list **stack_a) // A enlever !!!!!!!!!
 {
 	t_list	*lst;
 
@@ -32,7 +32,7 @@ void	print_lst(t_list **stack_a)
 		printf("%d\n", lst->value);
 		lst = lst->next;
 	}
-}	
+}
 
 int	main(int argc, char **argv)
 {
@@ -54,7 +54,7 @@ int	main(int argc, char **argv)
 		return (0);
 	}
 	simple_or_radix(&stack_a, &stack_b);
-	print_lst(&stack_a);
+	print_lst(&stack_a); // A enlever !!!!!!!!!!!
 	ft_lstclear(&stack_a);
 	ft_lstclear(&stack_b);
 	return (0);

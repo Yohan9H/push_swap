@@ -6,7 +6,7 @@
 /*   By: yohurteb <yohurteb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 13:15:53 by yohurteb          #+#    #+#             */
-/*   Updated: 2024/06/14 17:14:49 by yohurteb         ###   ########.fr       */
+/*   Updated: 2024/06/14 17:28:39 by yohurteb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ void	sa(t_list **a)
 	t_list	*next_value;
 	int		swap;
 
-	if (!a || !*a)
-		return ;
 	next_value = (*a)->next;
 	swap = (*a)->value;
 	(*a)->value = next_value->value;
@@ -31,8 +29,6 @@ void	sb(t_list **b)
 	t_list	*next_value;
 	int		swap;
 
-	if (!b || !*b)
-		return ;
 	next_value = (*b)->next;
 	swap = (*b)->value;
 	(*b)->value = next_value->value;
@@ -46,14 +42,10 @@ void	ss(t_list **a, t_list **b)
 	int		swap;
 
 	next_value = (*a)->next;
-	if (!a || !*a)
-		return ;
 	swap = (*a)->value;
 	(*a)->value = next_value->value;
 	next_value->value = swap;
 	next_value = (*b)->next;
-	if (!b || !*b)
-		return ;
 	swap = (*b)->value;
 	(*b)->value = next_value->value;
 	next_value->value = swap;
