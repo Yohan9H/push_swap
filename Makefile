@@ -6,13 +6,13 @@
 #    By: yohurteb <yohurteb@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/07 12:48:41 by yohurteb          #+#    #+#              #
-#    Updated: 2024/06/13 17:05:31 by yohurteb         ###   ########.fr        #
+#    Updated: 2024/06/14 13:36:19 by yohurteb         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
-CC = cc -g
+CC = cc
 
 CFLAGS = -Wall -Werror -Wextra -I include/
 
@@ -30,7 +30,10 @@ SRCS = \
 	utils/ft_lstnew.c \
 	utils/ft_lstsize.c \
 	printf/ft_printf_two.c \
-	printf/ft_printf.c
+	printf/ft_printf.c \
+	algo/is_sorted.c \
+	algo/simple_sort.c \
+	algo/simple_sort_two.c
 
 OBJS = $(SRCS:.c=.o)
 

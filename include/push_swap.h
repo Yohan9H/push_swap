@@ -6,7 +6,7 @@
 /*   By: yohurteb <yohurteb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 13:15:55 by yohurteb          #+#    #+#             */
-/*   Updated: 2024/06/13 14:50:16 by yohurteb         ###   ########.fr       */
+/*   Updated: 2024/06/14 14:30:02 by yohurteb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,10 +59,16 @@ void	rra(t_list **a);
 
 void	rrb(t_list **b);
 
-int	ft_atoi(const char *str);
+long	ft_atoi(const char *str);
 
 t_list	*parser(char **argv, t_list **lst);
 
 int	check_args(int argc, char **argv);
+
+int	is_sorted(t_list **stack_a);
+
+void	sort_3_two(t_list **stack_a, t_list *lst, int min, int next_min);
+
+int	give_pos_min(t_list	**stack_a, int	min);
 
 #endif

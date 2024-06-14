@@ -1,37 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   is_sorted.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yohurteb <yohurteb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/12 17:04:51 by yohurteb          #+#    #+#             */
-/*   Updated: 2024/06/14 13:23:45 by yohurteb         ###   ########.fr       */
+/*   Created: 2024/06/14 10:31:42 by yohurteb          #+#    #+#             */
+/*   Updated: 2024/06/14 11:34:55 by yohurteb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char **argv)
+int	is_sorted(t_list **stack_a)
 {
-	t_list	*stack_a;
-	t_list	*stack_b;
+	t_list	*lst;
+	int		res;
 
-	if (check_args(argc, argv) == 1)
+	res = 0;
+	lst = *stack_a;
+	while (lst && lst->next)
 	{
-		write(2, "Error\n", 6);
-		return (1);
+		if (lst->value > lst->next->value)
+			res = 1;
+		lst = lst->next;
 	}
-	stack_a = NULL;
-	stack_a = parser(argv, &stack_a);
-	stack_b = (t_list *)malloc(ft_lstsize(stack_a) * sizeof(t_list));
-	if (is_sorted(&stack_a) == 0)
-	{
-		ft_lstclear(&stack_a);
-		ft_lstclear(&stack_b);
-	}
-	// simple_sort
-	// radix_sort
-	ft_lstclear(&stack_a);
-	ft_lstclear(&stack_b);
+	return (res);
 }
