@@ -6,13 +6,13 @@
 #    By: yohurteb <yohurteb@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/07 12:48:41 by yohurteb          #+#    #+#              #
-#    Updated: 2024/06/14 17:25:29 by yohurteb         ###   ########.fr        #
+#    Updated: 2024/06/17 13:11:59 by yohurteb         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
-CC = cc -g
+CC = cc
 
 CFLAGS = -Wall -Werror -Wextra -I include/
 

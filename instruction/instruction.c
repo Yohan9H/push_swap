@@ -6,7 +6,7 @@
 /*   By: yohurteb <yohurteb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 13:15:53 by yohurteb          #+#    #+#             */
-/*   Updated: 2024/06/14 17:28:39 by yohurteb         ###   ########.fr       */
+/*   Updated: 2024/06/17 13:45:06 by yohurteb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void	pa(t_list **a, t_list **b)
 	new = *b;
 	*b = (*b)->next;
 	ft_lstadd_front(a, new);
-	write(1, "pa\n", 4);
+	write(1, "pa\n", 3);
 }
 
 void	pb(t_list **b, t_list **a)
@@ -69,7 +69,7 @@ void	pb(t_list **b, t_list **a)
 	new = *a;
 	*a = (*a)->next;
 	ft_lstadd_front(b, new);
-	write(1, "pb\n", 4);
+	write(1, "pb\n", 3);
 }
 
 // #include <stdlib.h>

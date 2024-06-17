@@ -6,7 +6,7 @@
 /*   By: yohurteb <yohurteb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 11:02:11 by yohan.h           #+#    #+#             */
-/*   Updated: 2024/06/14 10:23:18 by yohurteb         ###   ########.fr       */
+/*   Updated: 2024/06/17 13:55:26 by yohurteb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ static int	verif_signe(const char *str, size_t *i)
 	return (sgn);
 }
 
-long	ft_atoi(const char *str)
+long long	ft_atoi(const char *str)
 {
 	size_t	i;
-	long		signe;
-	long		res;
+	long long		signe;
+	long long		res;
 
 	i = 0;
 	res = 0;

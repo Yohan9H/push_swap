@@ -6,7 +6,7 @@
 /*   By: yohurteb <yohurteb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 13:15:55 by yohurteb          #+#    #+#             */
-/*   Updated: 2024/06/14 17:27:13 by yohurteb         ###   ########.fr       */
+/*   Updated: 2024/06/17 13:55:36 by yohurteb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
 
 void	ft_lstclear(t_list **lst);
 
-long	ft_atoi(const char *str);
+long long	ft_atoi(const char *str);
 
 void	sa(t_list **a);
 
