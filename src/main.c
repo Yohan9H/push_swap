@@ -6,7 +6,7 @@
 /*   By: yohurteb <yohurteb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 17:04:51 by yohurteb          #+#    #+#             */
-/*   Updated: 2024/06/18 11:09:09 by yohurteb         ###   ########.fr       */
+/*   Updated: 2024/06/18 11:12:47 by yohurteb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static void	clean_split(char **argv, int argc)
 {
 	int	i;
 
-	i = 0;
+	i = 1;
 	if (argc == 1)
 	{
 		while (argv[i])
