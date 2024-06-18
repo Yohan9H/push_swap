@@ -6,7 +6,7 @@
 /*   By: yohurteb <yohurteb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 17:04:51 by yohurteb          #+#    #+#             */
-/*   Updated: 2024/06/18 11:12:47 by yohurteb         ###   ########.fr       */
+/*   Updated: 2024/06/18 14:54:06 by yohurteb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static void	clean_split(char **argv, int argc)
 	}
 }
 
-static void	main_too_long(t_list *stack_a, t_list *stack_b, char **argv, int argc)
+static void	main_too_long(t_list *stack_a, t_list *stack_b, char **av, int ac)
 {
 	if (is_sorted(&stack_a) == 0)
 	{
@@ -45,7 +45,7 @@ static void	main_too_long(t_list *stack_a, t_list *stack_b, char **argv, int arg
 		return ;
 	}
 	simple_or_radix(&stack_a, &stack_b);
-	clean_split(argv, argc);
+	clean_split(av, ac);
 	ft_lstclear(&stack_a);
 	ft_lstclear(&stack_b);
 }
