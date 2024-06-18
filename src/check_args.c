@@ -6,7 +6,7 @@
 /*   By: yohurteb <yohurteb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/13 14:49:03 by yohurteb          #+#    #+#             */
-/*   Updated: 2024/06/17 14:12:02 by yohurteb         ###   ########.fr       */
+/*   Updated: 2024/06/17 16:23:34 by yohurteb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	check_args(int argc, char **argv)
 	long long		tmp;
 
 	j = 1;
-	if (argc < 2)
+	if (argc < 1)
 		return (1);
 	while (argv[j])
 	{
