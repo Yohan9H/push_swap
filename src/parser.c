@@ -6,7 +6,7 @@
 /*   By: yohurteb <yohurteb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 16:51:37 by yohurteb          #+#    #+#             */
-/*   Updated: 2024/06/17 13:09:47 by yohurteb         ###   ########.fr       */
+/*   Updated: 2024/06/18 10:19:07 by yohurteb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static void	init_index(t_list **lst)
 	}
 }
 
-t_list *parser(char **argv, t_list **lst)
+t_list	*parser(char **argv, t_list **lst)
 {
 	t_list	*new;
 	size_t	j;

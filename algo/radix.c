@@ -6,7 +6,7 @@
 /*   By: yohurteb <yohurteb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 17:25:04 by yohurteb          #+#    #+#             */
-/*   Updated: 2024/06/17 13:17:18 by yohurteb         ###   ########.fr       */
+/*   Updated: 2024/06/18 10:02:20 by yohurteb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static	int	give_max(t_list **stack_a)
 static void	clean_b(t_list **stack_a, t_list **stack_b)
 {
 	while (ft_lstsize(*stack_b) != 0)
-	pa(stack_a, stack_b);
+		pa(stack_a, stack_b);
 }
 
 void	radix_sort(t_list **stack_a, t_list **stack_b)

@@ -6,7 +6,7 @@
 /*   By: yohurteb <yohurteb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/13 14:49:03 by yohurteb          #+#    #+#             */
-/*   Updated: 2024/06/17 16:23:34 by yohurteb         ###   ########.fr       */
+/*   Updated: 2024/06/18 10:17:31 by yohurteb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,8 @@ static int	is_num(char *argv)
 
 int	check_args(int argc, char **argv)
 {
-	size_t	j;
-	long long		tmp;
+	size_t		j;
+	long long	tmp;
 
 	j = 1;
 	if (argc < 1)

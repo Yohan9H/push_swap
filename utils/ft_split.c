@@ -6,7 +6,7 @@
 /*   By: yohurteb <yohurteb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 16:43:18 by yohan.h           #+#    #+#             */
-/*   Updated: 2024/06/17 15:34:22 by yohurteb         ###   ########.fr       */
+/*   Updated: 2024/06/18 09:53:41 by yohurteb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,9 +79,10 @@ static int	split_dup(char const *s, char **str, char c, size_t *ct_word)
 	size_t	skp;
 
 	skp = 0;
-	k = 0;
+	k = 1;
 	svg = 0;
 	o = 0;
+	*ct_word = *ct_word + 1;
 	while (k < (int)*ct_word)
 	{
 		str[k] = (char *)malloc(len_split(s, c, &svg, &skp) + 1 * sizeof(char));

@@ -6,13 +6,13 @@
 #    By: yohurteb <yohurteb@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/07 12:48:41 by yohurteb          #+#    #+#              #
-#    Updated: 2024/06/17 16:20:35 by yohurteb         ###   ########.fr        #
+#    Updated: 2024/06/18 10:20:12 by yohurteb         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
-CC = cc -g
+CC = cc
 
 CFLAGS = -Wall -Werror -Wextra -I include/
 
@@ -24,7 +24,6 @@ SRCS = \
 	instruction/instruction_two.c \
 	utils/ft_atoi.c \
 	utils/ft_strlen.c \
-	utils/ft_strjoin.c \
 	utils/ft_split.c \
 	utils/ft_lstadd_back.c \
 	utils/ft_lstadd_front.c \
