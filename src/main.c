@@ -6,7 +6,7 @@
 /*   By: yohurteb <yohurteb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 17:04:51 by yohurteb          #+#    #+#             */
-/*   Updated: 2024/06/18 14:54:06 by yohurteb         ###   ########.fr       */
+/*   Updated: 2024/06/18 16:09:24 by yohurteb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,11 @@ static void	clean_split(char **argv, int argc)
 {
 	int	i;
 
-	i = 1;
+	i = 0;
+	argv[0] = malloc(1);
+	if (!argv[0])
+		return ;
+	argv[0] = 0;
 	if (argc == 1)
 	{
 		while (argv[i])
@@ -42,10 +46,13 @@ static void	main_too_long(t_list *stack_a, t_list *stack_b, char **av, int ac)
 	{
 		ft_lstclear(&stack_a);
 		ft_lstclear(&stack_b);
+		if (ac == 1)
+			clean_split(av, ac);
 		return ;
 	}
 	simple_or_radix(&stack_a, &stack_b);
-	clean_split(av, ac);
+	if (ac == 1)
+		clean_split(av, ac);
 	ft_lstclear(&stack_a);
 	ft_lstclear(&stack_b);
 }
@@ -59,7 +66,7 @@ int	main(int argc, char **argv)
 	if (argc == 1)
 	{
 		argv = ft_split(argv[1], ' ');
-		if (!argv)
+		if (!argv[1])
 			return (1);
 	}
 	if (check_args(argc, argv) == 1)
