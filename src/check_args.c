@@ -6,7 +6,7 @@
 /*   By: yohurteb <yohurteb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/13 14:49:03 by yohurteb          #+#    #+#             */
-/*   Updated: 2024/06/18 10:17:31 by yohurteb         ###   ########.fr       */
+/*   Updated: 2024/06/19 12:03:07 by yohurteb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,13 @@ static int	is_num(char *argv)
 	size_t	i;
 
 	i = 0;
+	if (argv[0] == '-' && argv[1] == '\0')
+		return (1);
 	if (argv[0] == '-')
 		i++;
 	while (argv[i])
 	{
-		if (argv[i] < '0' && argv[i] > '9')
+		if (argv[i] < '0' || argv[i] > '9')
 			return (1);
 		i++;
 	}
@@ -50,6 +52,8 @@ int	check_args(int argc, char **argv)
 		return (1);
 	while (argv[j])
 	{
+		if (argv[j][0] == '\0')
+			return (1);
 		if (is_num(argv[j]) == 1)
 			return (1);
 		tmp = ft_atoi(argv[j]);

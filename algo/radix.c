@@ -6,28 +6,20 @@
 /*   By: yohurteb <yohurteb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 17:25:04 by yohurteb          #+#    #+#             */
-/*   Updated: 2024/06/18 10:02:20 by yohurteb         ###   ########.fr       */
+/*   Updated: 2024/06/19 12:10:48 by yohurteb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static	int	give_max(t_list **stack_a)
+static	int	give_max(t_list **stack_a, int max_index)
 {
 	t_list	*lst;
-	int		max;
 	int		max_bits;
 
 	lst = *stack_a;
-	max = lst->index;
 	max_bits = 0;
-	while (lst)
-	{
-		if (lst->value > max)
-			max = lst->value;
-		lst = lst->next;
-	}
-	while (max >> max_bits != 0)
+	while (max_index >> max_bits != 0)
 		max_bits++;
 	return (max_bits);
 }
@@ -48,8 +40,8 @@ void	radix_sort(t_list **stack_a, t_list **stack_b)
 
 	i = 0;
 	j = 0;
-	max_bits = give_max(stack_a);
 	size = ft_lstsize(*stack_a);
+	max_bits = give_max(stack_a, size - 1);
 	lst = *stack_a;
 	while (i < max_bits)
 	{
