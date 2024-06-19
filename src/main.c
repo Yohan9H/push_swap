@@ -6,7 +6,7 @@
 /*   By: yohurteb <yohurteb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 17:04:51 by yohurteb          #+#    #+#             */
-/*   Updated: 2024/06/18 16:09:24 by yohurteb         ###   ########.fr       */
+/*   Updated: 2024/06/19 09:44:03 by yohurteb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,55 +20,12 @@ static void	simple_or_radix(t_list **stack_a, t_list **stack_b)
 		radix_sort(stack_a, stack_b);
 }
 
-static void	clean_split(char **argv, int argc)
-{
-	int	i;
-
-	i = 0;
-	argv[0] = malloc(1);
-	if (!argv[0])
-		return ;
-	argv[0] = 0;
-	if (argc == 1)
-	{
-		while (argv[i])
-		{
-			free(argv[i]);
-			i++;
-		}
-		free(argv);
-	}
-}
-
-static void	main_too_long(t_list *stack_a, t_list *stack_b, char **av, int ac)
-{
-	if (is_sorted(&stack_a) == 0)
-	{
-		ft_lstclear(&stack_a);
-		ft_lstclear(&stack_b);
-		if (ac == 1)
-			clean_split(av, ac);
-		return ;
-	}
-	simple_or_radix(&stack_a, &stack_b);
-	if (ac == 1)
-		clean_split(av, ac);
-	ft_lstclear(&stack_a);
-	ft_lstclear(&stack_b);
-}
-
 int	main(int argc, char **argv)
 {
 	t_list	*stack_a;
 	t_list	*stack_b;
 
 	argc--;
-	if (argc == 1)
-	{
-		argv = ft_split(argv[1], ' ');
-		if (!argv[1])
-			return (1);
-	}
 	if (check_args(argc, argv) == 1)
 	{
 		write(2, "Error\n", 6);
@@ -77,6 +34,14 @@ int	main(int argc, char **argv)
 	stack_a = NULL;
 	stack_a = parser(argv, &stack_a);
 	stack_b = NULL;
-	main_too_long(stack_a, stack_b, argv, argc);
+	if (is_sorted(&stack_a) == 0)
+	{
+		ft_lstclear(&stack_a);
+		ft_lstclear(&stack_b);
+		return (0);
+	}
+	simple_or_radix(&stack_a, &stack_b);
+	ft_lstclear(&stack_a);
+	ft_lstclear(&stack_b);
 	return (0);
 }
