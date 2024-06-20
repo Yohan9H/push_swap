@@ -6,7 +6,7 @@
 /*   By: yohurteb <yohurteb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 11:02:11 by yohan.h           #+#    #+#             */
-/*   Updated: 2024/06/20 13:18:15 by yohurteb         ###   ########.fr       */
+/*   Updated: 2024/06/20 14:54:39 by yohurteb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,26 @@ static int	verif_signe(const char *str, size_t *i)
 	return (sgn);
 }
 
+static void	check_overflow(const char *str)
+{
+	size_t	size;
+	size_t	i;
+
+	size = 0;
+	i = 0;
+	while (str[i] == 0 || str[i] == '-')
+		i++;
+	while (str[i++])
+		size++;
+	if (size > 10)
+	{
+		write(2, "Error\n", 6);
+		exit(1);
+	}
+	else
+		return ;
+}
+
 long long	ft_atoi(const char *str)
 {
 	size_t		i;
@@ -42,6 +62,7 @@ long long	ft_atoi(const char *str)
 		res = res * 10 + (str[i] - '0');
 		i++;
 	}
+	check_overflow(str);
 	return (res * signe);
 }
 
