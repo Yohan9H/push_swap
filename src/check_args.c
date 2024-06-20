@@ -6,7 +6,7 @@
 /*   By: yohurteb <yohurteb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/13 14:49:03 by yohurteb          #+#    #+#             */
-/*   Updated: 2024/06/19 12:03:07 by yohurteb         ###   ########.fr       */
+/*   Updated: 2024/06/20 10:30:17 by yohurteb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,7 @@ int	check_args(int argc, char **argv)
 	long long	tmp;
 
 	j = 1;
-	if (argc < 1)
-		return (1);
+	(void)argc;
 	while (argv[j])
 	{
 		if (argv[j][0] == '\0')
